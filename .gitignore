@@ -8,7 +8,7 @@ build
 #ignored folders
 
 build/
-.gradle/
+.gradle
 gradle/
 .nb-gradle/
 
