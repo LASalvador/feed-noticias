@@ -3,12 +3,23 @@
  */
 package feed.noticias;
 
-public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.annotation.WebServlet;
+import java.io.PrintWriter;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
+@WebServlet(urlPatterns={"/exemplo_01"})
+public class App extends HttpServlet {	
+	@Override
+	public void doGet(  HttpServletRequest req, 
+						HttpServletResponse res){
+		try{
+			PrintWriter pw = res.getWriter();
+			pw.write("{nome:'Fabricio', telefone: '2222222'}");
+			pw.close();
+		} catch (Exception e){
+			System.out.println("Erro em IO ou no Servlet");
+		}
+	}	
 }
