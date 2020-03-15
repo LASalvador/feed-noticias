@@ -17,4 +17,5 @@ gradle/
 #ignored extensions
 .exe
 .bin
-.class
+/bin
+.classpath
