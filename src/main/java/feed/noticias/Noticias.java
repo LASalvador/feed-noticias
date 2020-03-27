@@ -7,17 +7,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
-import java.io.PrintWriter;
 
-@WebServlet(urlPatterns={"/exemplo_01"})
-public class App extends HttpServlet {	
+@WebServlet(urlPatterns={"/noticias"})
+public class Noticias extends HttpServlet {	
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 8818607052067640463L;
+
 	@Override
-	public void doGet(  HttpServletRequest req, 
-						HttpServletResponse res){
+	public void doGet(HttpServletRequest req,HttpServletResponse res) {
 		try{
-			PrintWriter pw = res.getWriter();
-			pw.write("{nome:'Fabricio', telefone: '2222222'}");
-			pw.close();
+			req.getRequestDispatcher("/WEB-INF/noticias.jsp").forward(req, res);
 		} catch (Exception e){
 			System.out.println("Erro em IO ou no Servlet");
 		}

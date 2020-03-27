@@ -31,4 +31,4 @@ dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'feed.noticias.App'
+mainClassName = 'feed.noticias.Feed'
