@@ -53,10 +53,6 @@
     border: 0;
 }
 
-.feed-container ul li button:hover {
-    opacity: 0.8
-}
-
 .feed-container ul li strong {
     display: block;
     margin-bottom: 16px;
