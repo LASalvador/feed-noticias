@@ -19,7 +19,12 @@ and open the template in the editor.
 
               <span>Bem vindo </span>
 
-              <button class="button">Fazer Login</button>
+              <a 
+                class="button"
+                href="/feed-noticias/login"
+              >
+                Fazer Login
+              </a>
             </header>
 
             <h1>Últimas notícias</h1>

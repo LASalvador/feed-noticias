@@ -23,7 +23,10 @@ and open the template in the editor.
                     <p>
                         Cadastrar-se para ter acesso as notícias
                     </p>
-                    <a className="back-link" >
+                    <a 
+                        class="back-link" 
+                        href="/feed-noticias/feed"
+                    >
                         <i class="material-icons">arrow_back</i>
                         Voltar para home
                     </a> 
