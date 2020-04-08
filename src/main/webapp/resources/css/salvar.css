@@ -1,0 +1,44 @@
+.salvar-container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 32px auto
+}
+
+.salvar-container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.salvar-container header a img {
+    height: 64px
+}
+
+.salvar-container header a {
+    width: 260px;
+    margin-top: 0
+}
+
+.salvar-container section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.salvar-container section form {
+    width: 100%;
+}
+
+.salvar-container section form input,
+.salvar-container section form textarea {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.salvar-container section form textarea {
+    height: 300px;
+}
