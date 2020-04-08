@@ -10,11 +10,11 @@ and open the template in the editor.
         <%@ page contentType="text/html; charset=UTF-8" %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources/css/global.css"/>
-        <link rel="stylesheet" href="resources/css/noticias.css"/>
+        <link rel="stylesheet" href="resources/css/usuarios.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-        <div class="noticias-container">
+        <div class="usuarios-container">
             <header>
               <a href="/feed-noticias/feed">
                 <img src="resources/images/icon.png" alt="logo feed noticias">
@@ -41,41 +41,36 @@ and open the template in the editor.
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Vacina contra corona criada</td>
+                            <td>João das neves</td>
                             <td>
-                                <i class="material-icons">update</i>
                                 <i class="material-icons">delete</i>
                             </td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Vacina contra corona criada</td>
+                            <td>João das neves</td>
                             <td>
-                                <i class="material-icons">update</i>
                                 <i class="material-icons">delete</i>
                             </td>                            
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Vacina contra corona criada</td>
+                            <td>João das neves</td>
                             <td>
-                                <i class="material-icons">update</i>
                                 <i class="material-icons">delete</i>
                             </td>                            
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Vacina contra corona criada</td>
+                            <td>João das neves</td>
                             <td>
-                                <i class="material-icons">update</i>
                                 <i class="material-icons">delete</i>
                             </td>                            
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>Vacina contra corona criada</td>
+                            <td>João das neves</td>
                             <td>
-                                <i class="material-icons">update</i>
                                 <i class="material-icons">delete</i>
                             </td>
                         </tr>
