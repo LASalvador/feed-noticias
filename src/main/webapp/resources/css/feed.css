@@ -46,7 +46,7 @@
     position: relative
 }
 
-.feed-container ul li button {
+.feed-container ul li a {
     position: absolute;
     right: 24px;
     top: 24px;

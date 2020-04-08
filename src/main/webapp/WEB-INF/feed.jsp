@@ -34,63 +34,108 @@ and open the template in the editor.
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
               <li>
                 <h3>Vacina para corona é testada</h3>
                 <strong>Data:</strong>
                 <p>21/04/2020</p>
 
-                <button class="button">Saiba mais</button>
+                <a 
+                  class="button"
+                  href="/feed-noticias/noticia"
+                >
+                  Saiba mais
+                </a>
               </li>
             </ul>
         </div>
