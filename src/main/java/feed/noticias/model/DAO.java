@@ -7,29 +7,20 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class DAO {
-    protected static DAO instance;
+public abstract class DAO {
     protected EntityManager entityManager;
 
     protected DAO() {
         entityManager = getEntityManager();
     }
 
-    public static DAO getInstance(){
-        if (instance == null){
-           instance = new DAO();
-        }
-         
-        return instance;
+    private EntityManager getEntityManager() {
+      EntityManagerFactory factory = 
+      Persistence.createEntityManagerFactory("feed_noticias");
+      if (entityManager == null) {
+        entityManager = factory.createEntityManager();
       }
 
-      private EntityManager getEntityManager() {
-       EntityManagerFactory factory = 
-       Persistence.createEntityManagerFactory("feed-noticias");
-       if (entityManager == null) {
-         entityManager = factory.createEntityManager();
-       }
-
-       return entityManager;
+      return entityManager;
       }
 }

@@ -3,9 +3,18 @@ package feed.noticias.model;
 import java.util.List;
 
 public class NoticiaDAO extends DAO{
+    protected static NoticiaDAO instance;
 
     public NoticiaDAO() {
         super();
+    }
+
+    public static NoticiaDAO getInstance(){
+        if (instance == null){
+           instance = new NoticiaDAO();
+        }
+         
+        return instance;
     }
 
     public void persist(Noticia noticia) {

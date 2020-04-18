@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -28,15 +29,20 @@ and open the template in the editor.
               </a>
             </header>
             <section>
-                <form>
+                <form action="salvar" method="POST">
                     <input 
+                        id="titulo"
                         type="text"
                         placeholder="título da notícia"
                         name="titulo"
-                    >
-                    <textarea
+                        value="${fn:escapeXml(param.titulo)}"
+                        >
+                        <textarea
+                        id="corpo"
                         placeholder="corpo da notícia"
                         name="corpo"
+                        value="${fn:escapeXml(param.corpo)}"
+                        
                     ></textarea>
                     <button 
                         type="submit"
