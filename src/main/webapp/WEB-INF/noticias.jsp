@@ -1,5 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -51,7 +50,6 @@ and open the template in the editor.
                                 </td>
                             </tr>
                         </c:forEach>
-                        </tr>
                     </tbody>
                 </table>
             </section>

@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -41,102 +42,20 @@ and open the template in the editor.
                   Saiba mais
                 </a>
               </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
+              <c:forEach items="${noticias}" var="noticia">
+                <li>
+                  <h3><c:out value="${noticia.titulo}" /></h3>
+                  <strong>Data:</strong>
+                  <p>21/04/2020</p>
+  
+                  <a 
+                    class="button"
+                    href="/feed-noticias/noticia"
+                  >
+                    Saiba mais
+                  </a>
+                </li>
+                </c:forEach>
             </ul>
         </div>
     </body>
