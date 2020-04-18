@@ -34,7 +34,7 @@ public class NoticiaDAO extends DAO{
       Noticia.class.getName()).getResultList();
     }
 
-    public Noticia find(final int id) {
+    public Noticia find(final Long id) {
         return entityManager.find(Noticia.class, id);
     }
 
@@ -44,7 +44,7 @@ public class NoticiaDAO extends DAO{
         entityManager.getTransaction().commit();
     }
     
-    public void removeById(final int id) {
+    public void removeById(final Long id) {
         try {
             Noticia noticia = entityManager.find(Noticia.class, id);
             entityManager.getTransaction().begin();

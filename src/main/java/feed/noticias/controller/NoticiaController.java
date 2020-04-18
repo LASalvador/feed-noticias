@@ -8,15 +8,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import feed.noticias.model.NoticiaDAO;
+import feed.noticias.model.Noticia;
+
 @WebServlet(urlPatterns={"/noticia"})
-public class Noticia extends HttpServlet {	
-	/**
-	 *
-	 */
+public class NoticiaController extends HttpServlet {	
 	private static final long serialVersionUID = 8818607052067640463L;
 
 	@Override
 	public void doGet(HttpServletRequest req,HttpServletResponse res) {
+		
+		Long id  = Long.parseLong(req.getParameter("id"));
+		Noticia noticia = NoticiaDAO.getInstance().find(id);
+
+		req.setAttribute("noticia", noticia);
+
 		try{
 			req.getRequestDispatcher("/WEB-INF/noticia.jsp").forward(req, res);
 		} catch (Exception e){
