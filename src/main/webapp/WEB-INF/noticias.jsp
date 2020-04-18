@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -39,45 +41,16 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Vacina contra corona criada</td>
-                            <td>
-                                <i class="material-icons">update</i>
-                                <i class="material-icons">delete</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Vacina contra corona criada</td>
-                            <td>
-                                <i class="material-icons">update</i>
-                                <i class="material-icons">delete</i>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Vacina contra corona criada</td>
-                            <td>
-                                <i class="material-icons">update</i>
-                                <i class="material-icons">delete</i>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Vacina contra corona criada</td>
-                            <td>
-                                <i class="material-icons">update</i>
-                                <i class="material-icons">delete</i>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Vacina contra corona criada</td>
-                            <td>
-                                <i class="material-icons">update</i>
-                                <i class="material-icons">delete</i>
-                            </td>
+                        <c:forEach items="${noticias}" var="noticia">
+                            <tr>
+                                <td><c:out value="${noticia.id}" /></td>
+                                <td><c:out value="${noticia.titulo}" /></td>
+                                <td>
+                                    <i class="material-icons">update</i>
+                                    <i class="material-icons">delete</i>
+                                </td>
+                            </tr>
+                        </c:forEach>
                         </tr>
                     </tbody>
                 </table>
