@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -31,22 +32,27 @@ and open the template in the editor.
                         Voltar para home
                     </a> 
                 </section>  
-                <form>
+                <form action="cadastro" method="POST">
                     <input
                         type="text"
+                        id="nome"
                         placeholder="Nome"
                         name="nome"
+                        value="${fn:escapeXml(param.nome)}"
                     >
                     <input 
+                        id="email"
                         type="email"
                         name="email"
                         placeholder="Email"
+                        value="${fn:escapeXml(param.email)}"
                     >
                     <input 
+                        id="senha"
                         type="password" 
-                        name="password" 
-                        id="password"
-                        placeholder="Password"
+                        name="senha" 
+                        placeholder="Senha"
+                        value="${fn:escapeXml(param.senha)}"
                     >
                     <button type="submit" class="button"> Cadastrar </button>
                 </form>

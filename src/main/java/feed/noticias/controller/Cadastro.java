@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import feed.noticias.resources.UsuarioBuilder;
+import feed.noticias.model.Usuario;
+import feed.noticias.model.UsuarioDAO;
+
 @WebServlet(urlPatterns={"/cadastro"})
 public class Cadastro extends HttpServlet {	
 	/**
@@ -22,5 +26,22 @@ public class Cadastro extends HttpServlet {
 		} catch (Exception e){
 			System.out.println("Erro em IO ou no Servlet");
 		}
-	}	
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp){
+		try {
+			String nome = req.getParameter("nome");
+			String email = req.getParameter("email");
+			String senha = req.getParameter("senha");
+
+			UsuarioBuilder uBuilder = new UsuarioBuilder().iniciar().comNome(nome).comEmail(email).comSenha(senha).ehAdmin(false);
+			Usuario usuario = uBuilder.criarUsuario();
+			UsuarioDAO.getInstance().persist(usuario);
+
+			req.getRequestDispatcher("/WEB-INF/feed.jsp");
+		} catch (Exception e) {
+			System.out.println("Erro em IO ou no Servlet");
+		}
+	}
 }
