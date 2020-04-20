@@ -8,6 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import java.util.List;
+
+import feed.noticias.model.Usuario;
+import feed.noticias.model.UsuarioDAO;
+
 @WebServlet(urlPatterns={"/usuarios"})
 public class Usuarios extends HttpServlet {	
 	/**
@@ -17,6 +22,9 @@ public class Usuarios extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest req,HttpServletResponse res) {
+		List<Usuario> usuarios = UsuarioDAO.getInstance().findAll();
+
+		req.setAttribute("usuarios", usuarios);
 		try{
 			req.getRequestDispatcher("/WEB-INF/usuarios.jsp").forward(req, res);
 		} catch (Exception e){

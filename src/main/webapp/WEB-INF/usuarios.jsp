@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -39,41 +40,15 @@ and open the template in the editor.
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>João das neves</td>
-                            <td>
-                                <i class="material-icons">delete</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>João das neves</td>
-                            <td>
-                                <i class="material-icons">delete</i>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>João das neves</td>
-                            <td>
-                                <i class="material-icons">delete</i>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>João das neves</td>
-                            <td>
-                                <i class="material-icons">delete</i>
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>João das neves</td>
-                            <td>
-                                <i class="material-icons">delete</i>
-                            </td>
-                        </tr>
+                        <c:forEach items="${usuarios}" var="usuario">
+                            <tr>
+                                <td><c:out value="${usuario.id}" /></td>
+                                <td><c:out value="${usuario.nome}" /></td>
+                                <td>
+                                    <i class="material-icons">delete</i>
+                                </td>
+                            </tr>
+                        </c:forEach>
                     </tbody>
                 </table>
             </section>
