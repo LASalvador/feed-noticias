@@ -8,13 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
+import java.util.List;
+
 import feed.noticias.model.NoticiaDAO;
 import feed.noticias.model.Noticia;
 
-import java.util.List;
-
-@WebServlet(urlPatterns={"/feed"})
-public class Feed extends HttpServlet {	
+@WebServlet(urlPatterns={"/noticias"})
+public class NoticiasController extends HttpServlet {	
 	/**
 	 *
 	 */
@@ -22,12 +22,12 @@ public class Feed extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest req,HttpServletResponse res) {
-		
 		List<Noticia> noticias = NoticiaDAO.getInstance().findAll();
+		
 		req.setAttribute("noticias", noticias);
 		
 		try{
-			req.getRequestDispatcher("/WEB-INF/feed.jsp").forward(req, res);
+			req.getRequestDispatcher("/WEB-INF/noticias.jsp").forward(req, res);
 		} catch (Exception e){
 			System.out.println("Erro em IO ou no Servlet");
 		}

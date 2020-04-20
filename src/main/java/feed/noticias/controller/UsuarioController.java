@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.annotation.WebServlet;
 
 @WebServlet(urlPatterns={"/usuario"})
-public class Usuario extends HttpServlet {	
+public class UsuarioController extends HttpServlet {	
 	/**
 	 *
 	 */

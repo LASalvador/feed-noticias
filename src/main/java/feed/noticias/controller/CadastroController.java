@@ -13,7 +13,7 @@ import feed.noticias.model.Usuario;
 import feed.noticias.model.UsuarioDAO;
 
 @WebServlet(urlPatterns={"/cadastro"})
-public class Cadastro extends HttpServlet {	
+public class CadastroController extends HttpServlet {	
 	/**
 	 *
 	 */

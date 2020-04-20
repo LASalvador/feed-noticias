@@ -18,7 +18,7 @@ import feed.noticias.model.Noticia;
 import feed.noticias.model.NoticiaDAO;
 
 @WebServlet(urlPatterns={"/salvar"})
-public class SalvarNoticias extends HttpServlet {	
+public class SalvarNoticiasController extends HttpServlet {	
 	/**
 	 *
 	 */
