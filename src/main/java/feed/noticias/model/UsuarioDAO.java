@@ -36,7 +36,7 @@ public class UsuarioDAO extends DAO{
       Usuario.class.getName()).getResultList();
     }
 
-    public Usuario find(final int id) {
+    public Usuario find(final Long id) {
         return entityManager.find(Usuario.class, id);
     }
 
@@ -46,7 +46,7 @@ public class UsuarioDAO extends DAO{
         entityManager.getTransaction().commit();
     }
     
-    public void removeById(final int id) {
+    public void removeById(final Long id) {
         try {
             final Usuario usuario = entityManager.find(Usuario.class, id);
             entityManager.getTransaction().begin();
