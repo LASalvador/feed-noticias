@@ -13,6 +13,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="resources/css/global.css"/>
         <link rel="stylesheet" href="resources/css/usuarios.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="resources/js/usuarios.js"></script>
     </head>
     <body>
         <div class="usuarios-container">
@@ -45,7 +47,10 @@ and open the template in the editor.
                                 <td><c:out value="${usuario.id}" /></td>
                                 <td><c:out value="${usuario.nome}" /></td>
                                 <td>
-                                    <i class="material-icons">delete</i>
+                                    <i 
+                                        class="material-icons"
+                                        click="remover(${usuario.id})"
+                                    >delete</i>
                                 </td>
                             </tr>
                         </c:forEach>
