@@ -63,6 +63,11 @@ form textarea {
     opacity: 0.8
 }
 
+i:hover {
+    opacity: 0.8;
+    size: 120%;
+}
+
 
 .back-link {
     display: flex;
@@ -80,5 +85,5 @@ form textarea {
 }
 
 .back-link:hover {
-    opacity: 0.8;
+    opacity: 0.6;
 }
