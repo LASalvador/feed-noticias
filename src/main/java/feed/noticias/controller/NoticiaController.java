@@ -6,6 +6,7 @@ package feed.noticias.controller;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import javax.servlet.annotation.WebServlet;
 
 import feed.noticias.model.NoticiaDAO;
@@ -28,5 +29,18 @@ public class NoticiaController extends HttpServlet {
 		} catch (Exception e){
 			System.out.println("Erro em IO ou no Servlet");
 		}
-	}	
+	}
+
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
+		try {
+			Long id = Long.parseLong(req.getParameter("id"));
+			if (id > 0) {
+				NoticiaDAO.getInstance().removeById(id);
+			}
+		} catch (Exception e) {
+			System.out.println("Erro em IO ou no Servlet");
+		}
+	
+	}
 }

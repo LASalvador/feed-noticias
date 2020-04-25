@@ -13,6 +13,8 @@ and open the template in the editor.
         <link rel="stylesheet" href="resources/css/global.css"/>
         <link rel="stylesheet" href="resources/css/noticias.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="resources/js/noticias.js"></script>
     </head>
     <body>
         <div class="noticias-container">
@@ -46,7 +48,12 @@ and open the template in the editor.
                                 <td><c:out value="${noticia.titulo}" /></td>
                                 <td>
                                     <i class="material-icons">update</i>
-                                    <i class="material-icons">delete</i>
+                                    <i 
+                                        class="material-icons"
+                                        onclick="remover(${noticia.id})"
+                                    >
+                                        delete
+                                    </i>
                                 </td>
                             </tr>
                         </c:forEach>
