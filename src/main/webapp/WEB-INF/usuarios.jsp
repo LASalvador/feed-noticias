@@ -49,7 +49,7 @@ and open the template in the editor.
                                 <td>
                                     <i 
                                         class="material-icons"
-                                        click="remover(${usuario.id})"
+                                        onclick="remover(${usuario.id})"
                                     >delete</i>
                                 </td>
                             </tr>
