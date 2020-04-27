@@ -17,8 +17,8 @@ import feed.noticias.resources.NoticiaBuilder;
 import feed.noticias.model.Noticia;
 import feed.noticias.model.NoticiaDAO;
 
-@WebServlet(urlPatterns={"/salvar"})
-public class SalvarNoticiasController extends HttpServlet {	
+@WebServlet(urlPatterns = { "/salvar" })
+public class SalvarNoticiasController extends HttpServlet {
 	/**
 	 *
 	 */
@@ -26,10 +26,19 @@ public class SalvarNoticiasController extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest req,HttpServletResponse res) {
+	
 		try{
+			String id = req.getParameter("id");
+			if(id != null) {
+				Long LongId  = Long.parseLong(id);
+				Noticia noticia = NoticiaDAO.getInstance().find(LongId);
+
+				req.setAttribute("noticia", noticia);
+			}
+
 			req.getRequestDispatcher("/WEB-INF/salvar.jsp").forward(req, res);
 		} catch (Exception e){
-			System.out.println("Erro em IO ou no Servlet");
+			e.printStackTrace();
 		}
 	}	
 
