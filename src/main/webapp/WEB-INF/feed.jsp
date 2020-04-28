@@ -30,18 +30,6 @@ and open the template in the editor.
 
             <h1>Últimas notícias</h1>
             <ul>
-              <li>
-                <h3>Vacina para corona é testada</h3>
-                <strong>Data:</strong>
-                <p>21/04/2020</p>
-
-                <a 
-                  class="button"
-                  href="/feed-noticias/noticia"
-                >
-                  Saiba mais
-                </a>
-              </li>
               <c:forEach items="${noticias}" var="noticia">
                 <li>
                   <h3><c:out value="${noticia.titulo}" /></h3>
@@ -50,7 +38,7 @@ and open the template in the editor.
   
                   <a 
                     class="button"
-                    href="/feed-noticias/noticia"
+                    href="/feed-noticias/noticia?id=${noticia.id}"
                   >
                     Saiba mais
                   </a>
