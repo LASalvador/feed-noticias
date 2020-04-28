@@ -10,6 +10,11 @@ public class NoticiaBuilder {
         return this;
     }
 
+    public NoticiaBuilder comId(Long id){
+        this.noticia.setId(id);
+        return this;
+    }
+    
     public NoticiaBuilder comTitulo(String titulo){
         this.noticia.setTitulo(titulo);
         return this;
