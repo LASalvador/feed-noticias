@@ -48,3 +48,7 @@
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+a i { 
+    color: black;
+}

@@ -26,9 +26,9 @@ and open the template in the editor.
 
               <a 
                 class="button"
-                href="/feed-noticias/feed"
+                href="/feed-noticias/salvar"
               >
-                Sair
+                Cadastrar nova noticia
               </a>
             </header>
             <section>
