@@ -55,9 +55,23 @@ public class SalvarNoticiasController extends HttpServlet {
 
 		NoticiaDAO.getInstance().persist(noticia);
 	
-		messages.put("success", String.format("Noticia salva com sucesso"));		
+		messages.put("success", String.format("Noticia salva com sucesso"));				
+	}
+	
+	@Override
+	protected void doPut(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		Map<String, String> messages = new HashMap<String, String>();
+		req.setAttribute("messages", messages);
 
-		req.getRequestDispatcher("/WEB-INF/salvar.jsp").forward(req, res);
-		
+		Long id = Long.parseLong(req.getParameter("id"));
+		String titulo = req.getParameter("titulo");
+		String corpo = req.getParameter("corpo");
+
+		NoticiaBuilder nBuilder = new NoticiaBuilder().iniciar().comId(id).comTitulo(titulo).comCorpo(corpo);
+		Noticia noticia = nBuilder.criarNoticia();
+
+		NoticiaDAO.getInstance().merge(noticia);
+	
+		messages.put("success", String.format("Noticia salva com sucesso"));				
 	}
 }

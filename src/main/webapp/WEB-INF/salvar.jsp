@@ -13,6 +13,8 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="resources/css/global.css"/>
         <link rel="stylesheet" href="resources/css/salvar.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="resources/js/salvar.js"></script>
     </head>
     <body>
         <div class="salvar-container">
@@ -30,8 +32,13 @@ and open the template in the editor.
               </a>
             </header>
             <section>
-                <form action="salvar" method="POST">
-                    <input type="hidden" name="id" value="${noticia.id}">
+                <form onsubmit="return  salvar(event)">
+                    <input 
+                        type="hidden" 
+                        name="id" 
+                        id="id" 
+                        value="${noticia.id}"
+                    >
                     <input
                         id="titulo"
                         type="text"
