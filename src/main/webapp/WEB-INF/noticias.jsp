@@ -47,7 +47,13 @@ and open the template in the editor.
                                 <td><c:out value="${noticia.id}" /></td>
                                 <td><c:out value="${noticia.titulo}" /></td>
                                 <td>
-                                    <i class="material-icons">update</i>
+                                    <a href="salvar?id=${noticia.id}">
+                                        <i 
+                                            class="material-icons"
+                                        >
+                                            update
+                                        </i>
+                                    </a>
                                     <i 
                                         class="material-icons"
                                         onclick="remover(${noticia.id})"
