@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -20,20 +21,22 @@ and open the template in the editor.
                     <img src="resources/images/logoPrincipal.png" alt="Logo Feed notícias"/>
                     <h1>Faça Login</h1>
                 </section>  
-                <form>
-                    <input 
+                <form action="login" method="POST">
+                    <input
+                        id="email"
                         type="email"
                         name="email"
                         placeholder="Email"
                     >
                     <input 
                         type="password" 
-                        name="password" 
-                        id="password"
+                        name="senha" 
+                        id="senha"
                         placeholder="Password"
                     >
                     <button type="submit" class="button">Logar</button>
                 </form>
+                <p class="error"><c:out value="${message}" /></p>
                 <a class="back-link" href="/feed-noticias/cadastro">
                     Não possui conta? Cadastra-se já
                 </a>

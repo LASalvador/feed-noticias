@@ -87,3 +87,7 @@ i:hover {
 .back-link:hover {
     opacity: 0.6;
 }
+
+.error {
+    color: #e02041;
+}
