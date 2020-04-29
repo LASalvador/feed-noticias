@@ -2,6 +2,8 @@ package feed.noticias.model;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 public class UsuarioDAO extends DAO{
     
     protected static UsuarioDAO instance;
@@ -34,6 +36,30 @@ public class UsuarioDAO extends DAO{
     public List<Usuario> findAll() {
       return entityManager.createQuery("FROM " + 
       Usuario.class.getName()).getResultList();
+    }
+
+    public boolean validate(final String email, final String senha) {
+        Usuario usuario = null;
+    
+        Query query = entityManager.createQuery("FROM " + Usuario.class.getName() + " U WHERE U.email = :email").setParameter("email", email);
+        
+        usuario = (Usuario) query.getResultList().get(0);
+        
+        if (usuario != null && usuario.getSenha().equals(senha)) {
+            return true;
+        }
+        
+        return false;
+    }
+
+    public Usuario findByEmail(final String email) {
+        Usuario usuario = null;
+        
+        Query query = entityManager.createQuery("FROM " + Usuario.class.getName()+ " U WHERE U.email = :email").setParameter("email", email);
+        
+        usuario = (Usuario) query.getResultList().get(0);
+        
+        return usuario;
     }
 
     public Usuario find(final Long id) {
