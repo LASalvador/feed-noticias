@@ -20,12 +20,24 @@ and open the template in the editor.
 
               <span>Bem vindo </span>
 
-              <a 
-                class="button"
-                href="/feed-noticias/login"
-              >
-                Fazer Login
-              </a>
+              <c:choose>
+                  <c:when test="${empty sessionScope.uname}">
+                    <a 
+                      class="button"
+                      href="/feed-noticias/login"
+                    >
+                      Logar
+                    </a>
+                  </c:when>
+                  <c:otherwise>
+                    <a 
+                      class="button"
+                      href="/feed-noticias/feed"
+                    >
+                      Sair
+                    </a>
+                  </c:otherwise>
+              </c:choose>
             </header>
 
             <h1>Últimas notícias</h1>
