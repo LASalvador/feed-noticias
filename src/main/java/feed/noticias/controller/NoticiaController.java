@@ -6,7 +6,7 @@ package feed.noticias.controller;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebServlet;
 
 import feed.noticias.model.NoticiaDAO;
@@ -20,9 +20,16 @@ public class NoticiaController extends HttpServlet {
 	public void doGet(HttpServletRequest req,HttpServletResponse res) {
 		
 		Long id  = Long.parseLong(req.getParameter("id"));
+		HttpSession session= req.getSession();
+		
 		Noticia noticia = NoticiaDAO.getInstance().find(id);
 
-		req.setAttribute("noticia", noticia);
+		req.setAttribute("titulo", noticia.getTitulo());
+
+
+		if (session.getAttribute("uname") != null) {
+			req.setAttribute("corpo", noticia.getCorpo());
+		}
 
 		try{
 			req.getRequestDispatcher("/WEB-INF/noticia.jsp").forward(req, res);

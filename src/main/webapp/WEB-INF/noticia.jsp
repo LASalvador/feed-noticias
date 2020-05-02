@@ -19,20 +19,45 @@ and open the template in the editor.
               <a href="/feed-noticias/feed">
                 <img src="resources/images/icon.png" alt="logo feed noticias">
               </a>
-
-
-              <a 
-                class="button"
-                href="/feed-noticias/login"
-              >
-                Logar
-              </a>
+              <c:choose>
+                  <c:when test="${empty sessionScope.uname}">
+                    <a 
+                      class="button"
+                      href="/feed-noticias/login"
+                    >
+                      Logar
+                    </a>
+                  </c:when>
+                  <c:otherwise>
+                    <a 
+                      class="button"
+                      href="/feed-noticias/feed"
+                    >
+                      Sair
+                    </a>
+                  </c:otherwise>
+                </c:choose>
             </header>
             <section>
-                <h1><c:out value="${noticia.titulo}" /></h1>
-                <p>
-                  <c:out value="${noticia.corpo}" />
-                </p>
+                <h1><c:out value="${titulo}" /></h1>
+                <c:choose>
+                  <c:when test="${empty corpo}">
+                      <p>Para ter acesso ao conteudo faça login ou cadastre-se</p>
+                      <br>
+                      <a 
+                        class="button"
+                        href="/feed-noticias/login"
+                      >
+                        Logar
+                      </a>
+                  </c:when>
+                  <c:otherwise>
+                    <p>
+                      <c:out value="${corpo}" />
+                    </p>
+                  </c:otherwise>
+                </c:choose>
+                
             </section>
         </div>
     </body>
