@@ -18,7 +18,16 @@ and open the template in the editor.
             <header>
               <img src="resources/images/icon.png" alt="logo feed noticias">
 
-              <span>Bem vindo </span>
+              <span>
+                <c:choose>
+                  <c:when test="${empty sessionScope.uname}">
+                    Bem vindo
+                  </c:when>
+                  <c:otherwise>
+                    Bem vindo, <b><c:out value="${sessionScope.uname}" /></b>
+                  </c:otherwise>
+              </c:choose>
+              </span>
 
               <c:choose>
                   <c:when test="${empty sessionScope.uname}">
