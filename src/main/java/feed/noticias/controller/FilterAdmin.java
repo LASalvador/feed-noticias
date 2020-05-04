@@ -12,8 +12,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-@WebFilter(urlPatterns = { "/noticias", "/salvar", "usuarios" })
-// @WebFilter(servletNames = {"NoticiasController" , "UsuariosController","SalvarNoticiasController"})
+@WebFilter(urlPatterns = { "/noticias", "/salvar", "/usuarios", "/admin" })
 public class FilterAdmin implements Filter {
 
     @Override
