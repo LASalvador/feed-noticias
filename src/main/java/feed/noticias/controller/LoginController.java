@@ -39,9 +39,13 @@ public class LoginController extends HttpServlet {
 
 				HttpSession session= req.getSession();  
 				session.setAttribute("uname",usuario.getNome());
-				session.setAttribute("ux", usuario.getAdmin());
+				if (usuario.getAdmin()) {
+					session.setAttribute("ux", usuario.getAdmin());
+					resp.sendRedirect(req.getContextPath() + "/admin");
+				} else {
+					resp.sendRedirect(req.getContextPath() + "/feed");
+				}
 
-				resp.sendRedirect(req.getContextPath() + "/feed");
 
 			} else {
 				req.setAttribute("message", "Erro ao realizar logar. Verifique email e senha e tente novamente");
