@@ -1,5 +1,9 @@
 package feed.noticias.model;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -18,6 +22,16 @@ public class Noticia {
 
     @Column(name = "corpo", nullable = false)
     private String corpo;
+
+    @Column(name = "data", nullable = false)
+    private String data;
+
+    public Noticia() {
+        Calendar c = Calendar.getInstance();
+        Date data = c.getTime();
+        DateFormat f = DateFormat.getDateInstance(DateFormat.FULL);
+        this.data = f.format(data);
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -41,5 +55,9 @@ public class Noticia {
 
     public String getCorpo() {
         return this.corpo;
+    }
+    
+    public String getData() {
+        return this.data;
     }
 }   
