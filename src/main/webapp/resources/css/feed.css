@@ -80,4 +80,11 @@
         height: 30%;
         width: 30%;
     }
+    .feed-container ul li {
+        position: initial;
+    }
+
+    .feed-container ul li a {
+        position: initial;
+    }
 }
