@@ -24,12 +24,12 @@ and open the template in the editor.
               </a>
 
 
-              <a 
+              <!-- <a 
                 class="button"
                 href="/feed-noticias/login"
               >
                 Publicar
-              </a>
+              </a> -->
             </header>
             <section>
                 <form onsubmit="return  salvar(event)">

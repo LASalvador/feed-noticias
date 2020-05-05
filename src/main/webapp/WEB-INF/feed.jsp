@@ -41,7 +41,7 @@ and open the template in the editor.
                   <c:otherwise>
                     <a 
                       class="button"
-                      href="/feed-noticias/feed"
+                      href="/feed-noticias/sair"
                     >
                       Sair
                     </a>
