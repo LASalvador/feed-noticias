@@ -55,7 +55,7 @@ and open the template in the editor.
                 <li>
                   <h3><c:out value="${noticia.titulo}" /></h3>
                   <strong>Data:</strong>
-                  <p>21/04/2020</p>
+                  <p><c:out value="${noticia.data}" /></p>
   
                   <a 
                     class="button"
