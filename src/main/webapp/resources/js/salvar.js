@@ -18,8 +18,9 @@ function salvar(event) {
 }
 
 function post(formData) {
+    console.log('window.location.href')
     $.post('/feed-noticias/salvar', formData).done((data) =>{
-        window.location.href = 'feed-noticias/noticias';
+        location.replace('/feed-noticias/noticias')
     })
 }
 
@@ -29,7 +30,7 @@ function put(id, formData) {
         type: 'PUT',
         data: formData,
         success: function(response) {
-            window.location.href = '/noticias';
+            location.replace('/feed-noticias/noticias')
         },
         error: function (response) {
           alert('Erro ao atualizar noticia. Tente novamente');
