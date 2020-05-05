@@ -41,3 +41,13 @@
 .admin-container .content a {
     width: 50%;
 }
+
+@media only screen and (max-width: 900px) {
+    .admin-container .content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .admin-container .content .button {
+        width: 100%;
+    }
+}

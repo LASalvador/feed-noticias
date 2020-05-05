@@ -68,3 +68,16 @@
     line-height: 21px;
     font-size: 16px
 }
+
+@media only screen and (max-width: 900px) {
+    .feed-container ul {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        list-style: none
+    }
+    
+    .feed-container header img {
+        height: 30%;
+        width: 30%;
+    }
+}
