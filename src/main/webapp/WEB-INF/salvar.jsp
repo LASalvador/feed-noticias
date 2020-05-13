@@ -32,6 +32,16 @@ and open the template in the editor.
               </a> -->
             </header>
             <section>
+                <h1>
+                    <c:choose>
+                      <c:when test="${empty noticia.id}">
+                        Cadastrar nova notícia
+                      </c:when>
+                      <c:otherwise>
+                        Alterar a noticia: <b><c:out value="${noticia.id}" /></b>
+                      </c:otherwise>
+                  </c:choose>
+                  </h1>
                 <form onsubmit="return  salvar(event)">
                     <input 
                         type="hidden" 

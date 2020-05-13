@@ -32,7 +32,7 @@ and open the template in the editor.
               </a>
             </header>
             <section>
-                <h1>Notícias</h1>
+                <h1>Usuários</h1>
                 <table>
                     <thead>
                         <tr>
