@@ -117,9 +117,7 @@ Controller: java/feed/noticias/controller/LoginController.java
 Parametros: Body Params(email, senha)
 
 
-Rediceriona: se for usuário normal para webapp/
-
-WEB-INF/feed.jsp se for admin para webapp/WEB-INF/admin.jsp
+Rediceriona: se for usuário normal para `webapp/WEB-INF/feed.jsp` se for admin para `webapp/WEB-INF/admin.jsp`
 
 ### Rota:/sair
 #### Método HTTP: GET
