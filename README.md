@@ -10,6 +10,8 @@ Feed noticias é um portal de notícias construído com Java, usando Servlet, JS
 ## Rotas
 
 ### Rota:/
+#### Método HTTP: GET
+
 Ação: Retorna pagina de index
 
 
@@ -21,7 +23,7 @@ Pagina retornada: webapp/index.html
 
 
 ### Rota:/admin
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Retorna pagina de painel de adminstrador
@@ -38,7 +40,7 @@ Pagina retornada: webapp/WEB-INF/admin.jsp
 
 
 ### Rota:/cadastro
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Retorna pagina de cadastro
@@ -53,7 +55,7 @@ Pagina retornada: webapp/WEB-INF/admin.jsp
 
 
 
-Método HTTP: POST
+#### Método HTTP: POST
 
 
 Ação: Realiza o cadastro de um novo usuário
@@ -70,7 +72,7 @@ Rediceriona: webapp/WEB-INF/feed.jsp
 
 
 ### Rota:/feed
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Paga todas a noticias cadastradas e retona para gerar o feed de noticias
@@ -87,7 +89,7 @@ Pagina retornada: webapp/WEB-INF/feed.jsp
 
 
 ### Rota:/login
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Retorna pagina de login
@@ -103,7 +105,7 @@ Pagina retornada: webapp/WEB-INF/login.jsp
 
 
 
-Método HTTP: POST
+#### Método HTTP: POST
 
 
 Ação: Realiza o login de um usuário
@@ -115,12 +117,12 @@ Controller: java/feed/noticias/controller/LoginController.java
 Parametros: Body Params(email, senha)
 
 
-Rediceriona: se for usuário normal para `webapp/
+Rediceriona: se for usuário normal para webapp/
 
-WEB-INF/feed.jsp` se for admin para `webapp/WEB-INF/admin.jsp`
+WEB-INF/feed.jsp se for admin para webapp/WEB-INF/admin.jsp
 
 ### Rota:/sair
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Limpa a sessão do usuário
@@ -137,7 +139,7 @@ Redireciona: webapp/WEB-INF/feed.jsp
 
 
 ### Rota:/noticia
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Caso o usuário esteja logado traz titulo e corpo de noticia, se não só título.
@@ -153,7 +155,7 @@ Pagina retornada: webapp/WEB-INF/noticia.jsp
 
 
 
-Método HTTP: DELETE
+#### Método HTTP: DELETE
 
 
 Ação: Deleta uma noticia
@@ -167,7 +169,7 @@ Parametros: Query Params(id)
 
 
 ### Rota:/noticias
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Seleciona e lista todas as noticias disponíveis
@@ -184,7 +186,7 @@ Pagina retornada: webapp/WEB-INF/noticias.jsp
 
 
 ### Rota:/salvar
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Caso tenho o params(id) retorna o conteudo da noticia com id passado no parametro para ser editado, senão traz tela limpa para cadastrar nova noticia 
@@ -199,7 +201,7 @@ Pagina retornada: webapp/WEB-INF/salvar.jsp
 
 
 
-Método HTTP: POST
+#### Método HTTP: POST
 
 
 Ação: Cadastrar uma nova noticia
@@ -212,7 +214,7 @@ Parametros: BodyParams(titulo e corpo)
 
 
 
-Método HTTP: PUT
+#### Método HTTP: PUT
 
 
 Ação: Altera uma noticia já existente com id passado por parametro
@@ -224,7 +226,7 @@ Controller: java/feed/noticias/controller/SalvarNoticiasController.java
 Parametros: Query Params(id) , BodyParams(titulo e corpo)
 
 ### Rota:/usuario
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Traz uma pagina com os dados do usuario
@@ -240,7 +242,7 @@ Pagina retornada: webapp/WEB-INF/usuario.jsp
 
 
 
-Método HTTP: DELETE
+#### Método HTTP: DELETE
 
 
 Ação: Deleta o usuario
@@ -254,7 +256,7 @@ Parametros: Query Params(id)
 
 
 ### Rota:/usuarios
-Método HTTP: GET
+#### Método HTTP: GET
 
 
 Ação: Traz uma lista de todos os usuário cadastrados
