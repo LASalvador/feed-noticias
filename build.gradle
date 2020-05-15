@@ -33,5 +33,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+gretty {
+    servletContainer = 'tomcat8'
+}
+
 // Define the main class for the application
 mainClassName = 'feed.noticias.Feed'

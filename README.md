@@ -159,9 +159,9 @@ Pagina retornada: webapp/WEB-INF/noticia.jsp
 Ação: Deleta uma noticia
 
 
-Controller: java/feed/noticias/controller/
+Controller: java/feed/noticias/controller/NoticiaController.java
 
-NoticiaController.java
+
 Parametros: Query Params(id)
 
 
